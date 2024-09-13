@@ -3,8 +3,10 @@ background-color: #181818;
 font-family: 'Courier New', Courier, monospace;
 font-style: italic;
 color:#EADBE6;
-
+margin: 100px;
 }
+
+/* Typography */
 
 div.largetext {
     font-size: 128px; 
@@ -21,6 +23,13 @@ div.small {
     line-height: 16px;
 }
 
+div.serif{ 
+    font-family: times ;
+    font-weight: normal;
+}
+
+/* Colours */
+
 div.fontpink {
     color:#FF00BB;
 }
@@ -29,11 +38,59 @@ div.fontmiku {
     color: aqua;
 }
 
-div.bluebg {
+div.bgmiku {
     background-color:aquamarine;
 }
 
-div.serif{ 
-    font-family: times ;
-    font-weight: normal;
+div.bgpink {
+    background-color:#FF00BB;
+}
+
+/* Layout */
+
+div.width33 {
+    width: 33.333%;
+}
+
+div.width50{
+    width: 50%;
+}
+
+div.width66 {
+    width: 66.666%;
+}
+
+div.width100 {
+    width: 100%;
+}
+
+div.mb65 {
+    margin-bottom: 65px;
+}
+
+div.mb100 {
+    margin-bottom: 100px;
+}
+
+div.ml200 {
+    margin-left: 200px;
+}
+
+div.mlauto {
+    margin-left: auto;
+}
+
+div.mrauto {
+    margin-left: auto;
+}
+
+div.circle {
+    width: 530px;
+    height: 530px;
+    border-radius: 100%;
+}
+
+div.container {
+    display: flex;
+    flex-wrap: wrap;
 }
