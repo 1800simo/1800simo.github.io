@@ -1,4 +1,39 @@
 body {
-background-color: magenta;
+background-color: #181818; 
+font-family: 'Courier New', Courier, monospace;
+font-style: italic;
+color:#EADBE6;
 
+}
+
+div.largetext {
+    font-size: 128px; 
+    line-height: 100px;
+}
+
+div.mediumtext {
+    font-size: 32px;
+    line-height: 30px;
+}
+
+div.small {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+div.fontpink {
+    color:#FF00BB;
+}
+
+div.fontmiku {
+    color: aqua;
+}
+
+div.bluebg {
+    background-color:aquamarine;
+}
+
+div.serif{ 
+    font-family: times ;
+    font-weight: normal;
 }
