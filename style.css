@@ -1,7 +1,6 @@
 body {
 background-color: #181818; 
-font-family: 'Courier New', Courier, monospace;
-font-style: italic;
+font-family: "PPFractionMono-Bold";
 color:#EADBE6;
 margin: 100px;
 }
@@ -11,21 +10,40 @@ margin: 100px;
 div.largetext {
     font-size: 128px; 
     line-height: 100px;
+    animation: coloreffect 2s;
+    text-align: center;
 }
 
 div.mediumtext {
     font-size: 32px;
     line-height: 30px;
+    text-align: center;
 }
 
-div.small {
+div.smalltext{
     font-size: 16px;
     line-height: 16px;
+    text-align: center;
 }
 
 div.serif{ 
     font-family: times ;
     font-weight: normal;
+}
+
+@font-face {
+    src: url("fonts/huf script font.woff");
+    font-family: "huf";
+}
+
+@font-face {
+    src: url("fonts/PPFraktionMono-Bold.woff");
+    font-family: "PPFractionMono-Bold";
+}
+
+@font-face {
+    src: url("fonts/PPFraktionMono-Bold.woff");
+    font-family: "PPFractionMono-Bold";
 }
 
 /* Colours */
@@ -64,6 +82,10 @@ div.width100 {
     width: 100%;
 }
 
+div.mb50 {
+    margin-bottom: 50px;
+}
+
 div.mb65 {
     margin-bottom: 65px;
 }
@@ -93,4 +115,89 @@ div.circle {
 div.container {
     display: flex;
     flex-wrap: wrap;
+}
+
+div.containercolumn {
+    display: flexbox;
+    flex-direction: column;
+}
+
+div.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    height: 600px;
+   justify-content: flex-end;
+   background-color: aqua;
+   align-items: center;
+}
+
+div.thumbnail {
+    width: 200px;
+    background-color: #FF00BB;
+}
+
+/*image*/
+
+/*animation*/
+
+@keyframes fadein {
+    0% {
+        color:red;
+    }
+    50% {
+        color:blue;
+    }
+    100% {
+        color:lime;
+    }
+}
+
+div.fade {
+    animation:fadein 2s;
+}
+
+img {
+    width: 100%;
+}
+
+video {
+    width: 100%;
+}
+
+div.sticker1 {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+div.sticker2 {
+    position: fixed;
+    bottom: 10px;
+   right: 10px;
+}
+
+div.button {
+    padding: 10px;
+    background-color: #FF00BB;
+    color: #EADBE6;
+    display: inline-block;
+    border-radius: 10px;
+    margin-right: 20px;
+} 
+
+div.p50 {
+    padding: 50px;
+}
+
+div.border {
+    border: 3px solid #FF00BB;
+}
+
+div.rounded {
+    border-radius: 10px;
+}
+
+div.centre {
+    justify-content: center;
 }
