@@ -23,13 +23,17 @@ div.mediumtext {
 div.smalltext{
     font-size: 16px;
     line-height: 16px;
-    text-align: center;
 }
 
 div.serif{ 
     font-family: times ;
     font-weight: normal;
 }
+
+.center {
+    text-align: center;
+    border: 3px solid green;
+  }
 
 @font-face {
     src: url("fonts/huf script font.woff");
@@ -66,6 +70,10 @@ div.bgpink {
 
 /* Layout */
 
+div.width10 {
+    width: 10%;
+}
+
 div.width33 {
     width: 33.333%;
 }
@@ -82,16 +90,16 @@ div.width100 {
     width: 100%;
 }
 
+div.mb25 {
+    margin-bottom: 25px;
+}
+
 div.mb50 {
     margin-bottom: 50px;
 }
 
 div.mb65 {
     margin-bottom: 65px;
-}
-
-div.mb100 {
-    margin-bottom: 100px;
 }
 
 div.ml200 {
@@ -103,7 +111,7 @@ div.mlauto {
 }
 
 div.mrauto {
-    margin-left: auto;
+    margin-right: auto;
 }
 
 div.circle {
@@ -115,46 +123,48 @@ div.circle {
 div.container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    row-gap: 20px;
+    text-align: center;
 }
 
-div.containercolumn {
-    display: flexbox;
-    flex-direction: column;
+div.centre {
+    text-align: center;
 }
 
-div.thumbnails {
+div.middle {
+    justify-content: center;
+}
+
+div.ui {
     display: flex;
     flex-wrap: wrap;
-    height: 600px;
-   justify-content: flex-end;
-   background-color: aqua;
-   align-items: center;
 }
 
-div.thumbnail {
-    width: 200px;
-    background-color: #FF00BB;
+div.left {
+    text-align: center;
+    width: 50%;
+}
+
+div.right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+div.p25 {
+    padding: 10px;
+}
+
+
+div.p50 {
+    padding: 50px;
 }
 
 /*image*/
-
-/*animation*/
-
-@keyframes fadein {
-    0% {
-        color:red;
-    }
-    50% {
-        color:blue;
-    }
-    100% {
-        color:lime;
-    }
-}
-
-div.fade {
-    animation:fadein 2s;
-}
 
 img {
     width: 100%;
@@ -177,6 +187,34 @@ div.sticker2 {
    right: 10px;
 }
 
+div.border {
+    border: 3px solid #FF00BB;
+}
+
+div.rounded {
+    border-radius: 10px;
+}
+
+/*animation*/
+
+@keyframes fadein {
+    0% {
+        color:red;
+    }
+    50% {
+        color:blue;
+    }
+    100% {
+        color:lime;
+    }
+}
+
+div.fade {
+    animation:fadein 2s;
+}
+
+/*elements*/
+
 div.button {
     padding: 10px;
     background-color: #FF00BB;
@@ -186,18 +224,71 @@ div.button {
     margin-right: 20px;
 } 
 
-div.p50 {
-    padding: 50px;
+div.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    height: 600px;
+   justify-content: flex-end;
+   background-color: #00ffff;
+   align-items: center;
 }
 
-div.border {
-    border: 3px solid #FF00BB;
+div.thumbnail {
+    width: 200px;
+    background-color: #FF00BB;
 }
 
-div.rounded {
+div.pinkgrid {
+    border:3px solid #FF00BB;
     border-radius: 10px;
+    padding: 20px;
+    row-gap: 20px;
+    display:grid;
+    grid-template-columns: auto auto;
 }
 
-div.centre {
-    justify-content: center;
-}
+div.button {
+    padding: 15px 25px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #EADBE6;
+    background-color: #FF00BB;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #f7b2e4ca;
+  }
+  
+  div.button:hover {background-color: #00ffff}
+  
+  div.button:active {
+    background-color: #00ffff;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  .submit {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  
+  .submit.enabled {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+  
+  .randomMessage1, .randomMessage2, .randomMessage3, .randomMessage4 {
+    display: none;
+  }
+  
+  .active {
+    display: block;
+  }
+  
+  .highlight {
+    background-color: yellow; /* Or any other style you want for highlighting */
+    border: 2px solid orange;
+  }
+  
