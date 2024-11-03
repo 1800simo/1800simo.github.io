@@ -1,3 +1,8 @@
+
+
+
+
+
 // Add 'enabled' class to div.submit when any div.option is clicked
 document.querySelectorAll('div.option').forEach(function(option) {
     option.addEventListener('click', function() {
@@ -11,6 +16,10 @@ document.querySelectorAll('div.option').forEach(function(option) {
   
   // When div.submit button is clicked, show a random message and disable further clicks
   document.querySelector('div.submit').addEventListener('click', function() {
+
+    // remove any visible stickers
+    document.querySelector(".sticker").classList.remove("show");
+
     // Only proceed if div.submit has the enabled class
     if (this.classList.contains('enabled')) {
       // Hide all messages first
@@ -28,6 +37,24 @@ document.querySelectorAll('div.option').forEach(function(option) {
   
       // Disable the div.submit button by removing the 'enabled' class
       this.classList.remove('enabled');
+
+     // Run popup function
+     setTimeout(function() {
+        document.querySelector(".sticker1").classList.add("show");
+    }, 2000);
+    
+    setTimeout(function() {
+        document.querySelector(".sticker2").classList.add("show");
+    }, 1000);
+    
+    setTimeout(function() {
+        document.querySelector(".sticker3").classList.add("show");
+    }, 1500);
+    
+    setTimeout(function() {
+        document.querySelector(".sticker4").classList.add("show");
+    }, 500);
+
     }
   });
   

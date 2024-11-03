@@ -8,7 +8,7 @@ margin: 100px;
 /* Typography */
 
 div.largetext {
-    font-size: 128px; 
+    font-size: 60px; 
     line-height: 100px;
     animation: coloreffect 2s;
     text-align: center;
@@ -36,18 +36,17 @@ div.serif{
   }
 
 @font-face {
-    src: url("fonts/huf script font.woff");
-    font-family: "huf";
-}
-
-@font-face {
     src: url("fonts/PPFraktionMono-Bold.woff");
     font-family: "PPFractionMono-Bold";
 }
 
 @font-face {
-    src: url("fonts/PPFraktionMono-Bold.woff");
-    font-family: "PPFractionMono-Bold";
+    src: url("fonts/Estrella-Early.woff");
+    font-family: "estrella";
+}
+
+div.estrella {
+    font-family: "estrella";
 }
 
 /* Colours */
@@ -174,18 +173,7 @@ video {
     width: 100%;
 }
 
-div.sticker1 {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 2;
-}
 
-div.sticker2 {
-    position: fixed;
-    bottom: 10px;
-   right: 10px;
-}
 
 div.border {
     border: 3px solid #FF00BB;
@@ -247,7 +235,7 @@ div.pinkgrid {
     grid-template-columns: auto auto;
 }
 
-div.button {
+div.button2 {
     padding: 15px 25px;
     font-size: 16px;
     text-align: center;
@@ -260,9 +248,9 @@ div.button {
     box-shadow: 0 9px #f7b2e4ca;
   }
   
-  div.button:hover {background-color: #00ffff}
+  div.button2:hover {background-color: #00ffff}
   
-  div.button:active {
+  div.button2:active {
     background-color: #00ffff;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
@@ -288,7 +276,80 @@ div.button {
   }
   
   .highlight {
-    background-color: yellow; /* Or any other style you want for highlighting */
-    border: 2px solid orange;
+    background-color: #00ffff; 
+    border: 2px solid #00ffff;
   }
+
+  .scrollable {
+    margin: 0 30px;
+    overflow: hidden;
+  }
+  
+  .p1 {
+    animation: animate_text 15s linear infinite;
+  }
+
+  @keyframes animate_text {
+    from {
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+
+  div.sticker1 {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    display: none;
+    pointer-events: none;
+  }
+  
+  div.sticker1.show {
+    display:block;
+  }
+  
+  div.sticker2 {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: none;
+    pointer-events: none;
+  }
+  
+  div.sticker2.show {
+    display:block;
+  }
+  
+  div.sticker3 {
+    display: none;
+    top: 10px;
+    left: 10px;
+    justify-content: center;
+    pointer-events: none;
+  }
+  
+  div.sticker3.show {
+    display:block;
+  }
+  
+  div.sticker4 {
+    display: none;
+    pointer-events: none;
+  }
+  
+  div.sticker4.show {
+    display:block;
+  } 
+
+
+  
+  
+
+
+
+
   
