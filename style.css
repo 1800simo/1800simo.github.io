@@ -49,6 +49,24 @@ div.estrella {
     font-family: "estrella";
 }
 
+@font-face {
+    src: url("fonts/Ackem-Dot.woff");
+    font-family: "ackem"
+}
+
+div.ackem {
+    font-family: "ackem";
+}
+
+@font-face {
+    src: url("fonts/Huf\ Script\ Font.woff");
+    font-family: "huf";
+}
+
+div.huf {
+    font-family: "huf"
+}
+
 /* Colours */
 
 div.fontpink {
@@ -173,16 +191,6 @@ video {
     width: 100%;
 }
 
-
-
-div.border {
-    border: 3px solid #FF00BB;
-}
-
-div.rounded {
-    border-radius: 10px;
-}
-
 /*animation*/
 
 @keyframes fadein {
@@ -212,6 +220,15 @@ div.button {
     margin-right: 20px;
 } 
 
+.active {
+    display: block;
+  }
+  
+  .highlight {
+    background-color: #00ffff; 
+    border: 2px solid #00ffff;
+  }
+
 div.thumbnails {
     display: flex;
     flex-wrap: wrap;
@@ -226,37 +243,15 @@ div.thumbnail {
     background-color: #FF00BB;
 }
 
-div.pinkgrid {
-    border:3px solid #FF00BB;
-    border-radius: 10px;
-    padding: 20px;
-    row-gap: 20px;
-    display:grid;
-    grid-template-columns: auto auto;
+div.border {
+    border: 3px solid #FF00BB;
 }
 
-div.button2 {
-    padding: 15px 25px;
-    font-size: 16px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: #EADBE6;
-    background-color: #FF00BB;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #f7b2e4ca;
-  }
-  
-  div.button2:hover {background-color: #00ffff}
-  
-  div.button2:active {
-    background-color: #00ffff;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
+div.rounded {
+    border-radius: 10px;
+}
 
-  .submit {
+div.submit {
     opacity: 0.5;
     pointer-events: none;
   }
@@ -269,15 +264,6 @@ div.button2 {
   
   .randomMessage1, .randomMessage2, .randomMessage3, .randomMessage4 {
     display: none;
-  }
-  
-  .active {
-    display: block;
-  }
-  
-  .highlight {
-    background-color: #00ffff; 
-    border: 2px solid #00ffff;
   }
 
   .scrollable {
